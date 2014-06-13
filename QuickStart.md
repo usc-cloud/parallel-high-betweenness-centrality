@@ -47,7 +47,7 @@ Running
 
 * Next, run run-msl-bc.sh script to run the algorithm on the sample dataset. This will first partition the graph into two partitions using metis and then run the algorithm.
 
-	./run-louvain.sh
+	./run-msl-bc.sh
 
 Executing this script with run the algorithm in two MPI processors and output the highest 10 centrality vertices in the graph.
 

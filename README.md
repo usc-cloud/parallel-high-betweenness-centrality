@@ -17,6 +17,18 @@ Measures of effectiveness
 
 The algorithm has been tested using MPI on an HPC cluster with a varying number of nodes ranging from 4 to 64 with 2 workers per node, each worker with 8 GB memory. Each node consists of two Quad-core AMD Opteron 2376 2.3 GHz processors. Speed-ups of up to 12x have been observed for synthetic and real-life sparse graphs up to 1M vertices and 3M edges.
 
+How to get it
+---------------
+
+The algorithm is hosted at the git hub repository at https://github.com/usc-cloud/parallel-high-betweenness-centrality
+
+Clone the repository using
+
+<code>git clone https://github.com/usc-cloud/parallel-high-betweenness-centrality.git</code>
+
+Note: You may need to install a git client to download the repository.
+
+
 Future enhancements
 -------------------
 Given the increasing popularity of cloud oriented graph analytics frameworks a GoFFish version of the proposed algorithm will be delivered.
@@ -27,4 +39,4 @@ Installation
 
 A quick start guide can be found [here](QuickStart.md) together with a precompiled VM to help you get started.
 
-A detailed guide on how to install the software on a distributed setup can be found [here](/path/to/Louvain-install).
+A detailed guide on how to install the software on a distributed setup can be found [here](GeneralInstallationGuide.md).

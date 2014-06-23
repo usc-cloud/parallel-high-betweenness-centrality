@@ -93,7 +93,7 @@ optional_vertex_data e1 w1 e2 w2 …
 
 For example: The following undirected graph is represented using:
 
-
+<img src="http://losangeles.usc.edu/usc-cloud/goffish/bc_dataformat.png"/>
 
 Metis File:
 

@@ -9,22 +9,22 @@ This document provides a quick guide to setting up and running our distributed i
 
 Quick Start With Development VM 
 -------------------------------
-Download VM config from here (http://losangeles.usc.edu/usc-cloud/goffish/parallel-extract-bc.tar.gz)
+Download the VM config file from here (http://losangeles.usc.edu/usc-cloud/goffish/parallel-extract-bc.tar.gz)
 
 Setting up 
 ----------
 
-Install Virtual Box 4.3.8. Get it from here(virtul box link).
+Install Oracle Virtual Box 4.3.8. You can download it from [here](https://www.virtualbox.org/wiki/Download_Old_Builds_4_3)
 
-* Install and configure Vagrant
+* Install and configure Vagrant:
 
 	sudo apt-get install vagrant
 
-* (Optional) Add Vagrant plugin that keeps Virtual Box Guest Additions in sync.
+* (Optional) Add Vagrant plugin that keeps Virtual Box Guest Additions in sync:
 
 	vagrant plugin install vagrant-vbguest
 
-* Extract the vagrant development environment and start it.
+* Extract the vagrant development environment and start it:
 	Unzip parallel-extract-bc.zip
 	cd parallel-extract-bc
 	vagrant up
@@ -33,23 +33,24 @@ Install Virtual Box 4.3.8. Get it from here(virtul box link).
 
 Running
 -------
-* ssh into the vagrant vm
-	vagrant ssh
+* ssh into the vagrant VM: 
+    vagrant ssh
 
-* Source code is and sample data sets are located in /vagrant/code/ msl-bc-mpi directory. 
-	cd /vagrant/code/ msl-bc-mpi
+* Source code is and sample data sets are located in /vagrant/code/ msl-bc-mpi directory:
+	cd /vagrant/code/msl-bc-mpi
 
-* Sample small graph is located in this directory.
+* A sample small graph is located in this directory.
+
 4elt.txt - graph in edge list format. 
-4elt.graph - graph in metis graph format. 
+4elt.graph - graph in Metis graph format. 
 
-* Compile the program by running make 
+* Compile the program by running *make*.
 
-* Next, run run-msl-bc.sh script to run the algorithm on the sample dataset. This will first partition the graph into two partitions using metis and then run the algorithm.
+* Next, run *run-msl-bc.sh* script to run the algorithm on the sample dataset. This will first partition the graph into two partitions using Metis and then run the algorithm.
 
 	./run-msl-bc.sh
 
-Executing this script with run the algorithm in two MPI processors and output the highest 10 centrality vertices in the graph.
+Executing this script with run the algorithm on two MPI processors and output the highest 10 centrality vertices in the graph.
 
 
 [1] Alok Gautam Kumbhare, Marc Frincu, Viktor Prasanna, Cauligi Raghavendra, Efficient Extraction of High Centrality Vertices in Large Distributed Graphs, HPEC 2014.

@@ -17,6 +17,34 @@ Measures of effectiveness
 
 The algorithm has been tested using MPI on an HPC cluster with a varying number of nodes ranging from 4 to 64 with 2 workers per node, each worker with 8 GB memory. Each node consists of two Quad-core AMD Opteron 2376 2.3 GHz processors. Speed-ups of up to 12x have been observed for synthetic and real-life sparse graphs up to 1M vertices and 3M edges.
 
+
+Required Skill Sets
+-------------------
+
+* To use the algorithm on a given data set:
+
+ * Required
+
+  * Familiarity with Linux
+
+  * Manipulating graph data (potentially to convert the given data to the Metis graph format)
+
+  * Ability to run MPI programs on a single node or cluster depending on graph size
+
+ * Good to have
+
+  * To use the quick start guide, familiarity with Virtual Box and virtualization
+
+  * C++
+
+  * MPI Library
+
+ * To setup the environment on a cluster
+
+  * Cluster administration knowledge
+
+  * Setting up MPI environment on cluster
+
 How to get it
 ---------------
 
@@ -28,15 +56,14 @@ Clone the repository using
 
 Note: You may need to install a git client to download the repository.
 
-
-Future enhancements
--------------------
-Given the increasing popularity of cloud oriented graph analytics frameworks a GoFFish version of the proposed algorithm will be delivered.
-
-
 Installation
 ------------
 
 A quick start guide can be found [here](QuickStart.md) together with a precompiled VM to help you get started.
 
 A detailed guide on how to install the software on a distributed setup can be found [here](GeneralInstallationGuide.md).
+
+Future enhancements
+-------------------
+
+Given the increasing popularity of cloud oriented graph analytics frameworks a GoFFish version of the proposed algorithm will be delivered.

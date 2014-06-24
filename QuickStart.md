@@ -18,26 +18,29 @@ Install Oracle Virtual Box 4.3.8. You can download it from [here](https://www.vi
 
 * Install and configure Vagrant:
 
-	sudo apt-get install vagrant
+	*sudo apt-get install vagrant*
 
 * (Optional) Add Vagrant plugin that keeps Virtual Box Guest Additions in sync:
 
-	vagrant plugin install vagrant-vbguest
+	*vagrant plugin install vagrant-vbguest*
 
 * Extract the vagrant development environment and start it:
-	Unzip parallel-extract-bc.zip
-	cd parallel-extract-bc
-	vagrant up
+
+	**Unzip parallel-extract-bc.zip*
+	*cd parallel-extract-bc*
+	*vagrant up*
 
 * Wait for vagrant to configure the VM.
 
 Running
 -------
 * ssh into the vagrant VM: 
-    vagrant ssh
+
+    *vagrant ssh*
 
 * Source code is and sample data sets are located in /vagrant/code/ msl-bc-mpi directory:
-	cd /vagrant/code/msl-bc-mpi
+	
+	*cd /vagrant/code/msl-bc-mpi*
 
 * A sample small graph is located in this directory.
 
@@ -46,9 +49,9 @@ Running
 
 * Compile the program by running *make*.
 
-* Next, run *run-msl-bc.sh* script to run the algorithm on the sample dataset. This will first partition the graph into two partitions using Metis and then run the algorithm.
+* Next, run *run-msl-bc.sh* script to run the algorithm on the sample dataset. This will first partition the graph into two partitions using Metis and then run the algorithm:
 
-	./run-msl-bc.sh
+    *./run-msl-bc.sh*
 
 Executing this script with run the algorithm on two MPI processors and output the highest 10 centrality vertices in the graph.
 

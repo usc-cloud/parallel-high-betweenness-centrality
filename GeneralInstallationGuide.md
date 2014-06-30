@@ -91,21 +91,49 @@ To summarize, the metis format of the following
 
 optional_vertex_data e1 w1 e2 w2 …
 
-For example: The following undirected graph is represented using:
+For example: 
 
-<img src="http://losangeles.usc.edu/usc-cloud/goffish/bc_dataformat.png"/>
+See: <http://people.sc.fsu.edu/~jburkardt/data/metis_graph/metis_graph.html> for sample metis files.
 
-Metis File:
+Sample Metis File:
 
-4 5 001 //4: num vertices, 5: num edges, 001 -> indicates no vertex data but available edge data
-
-2 2 3 1 4 1 // e1 w1 e2 w2 e3 w3 for vertex 1
-
-1 2 3 2 4 1
-
-1 3 2 2
-
-1 4 2 1
-
+```
+%  tiny_02.graph
+%  A very small example of a graph
+%  using weights on edges,
+%  stored in the METIS graph file format.
+%
+%  The first non-comment line lists 
+%  the number of vertices (7), edges (11) and the value of FMT.
+%
+%  FMT has the following meanings:
+%    0  the graph has no weights (in this case, you can omit FMT);
+%    1  the graph has edge weights;
+%   10  the graph has vertex weights;
+%   11  the graph has both edge and vertex weights.
+%
+%  This graph uses edge weights only.  Edge weights must be
+%  integers strictly greater than 0.  
+%
+%  The next line notes that vertex 1 is connected to:
+%    vertex 5 on an edge with weight 1, 
+%    vertex 3 on an edge with weight 2, and
+%    vertex 2 on an edge with weight 1.
+%
+%  Subsequent lines list the neighbors of successive vertices.
+%
+ 7 11  1
+%
+%  Here come the (vertex_neighbor,edge_weight) pairs:
+%
+ 5 1   3 2   2 1
+ 1 1   3 2   4 1
+ 5 3   4 2   2 2   1 2
+ 2 1   3 2   6 2   7 5
+ 1 1   3 3   6 2
+ 5 2   4 2   7 6
+ 6 6   4 5
+```
+ 
 Please see the manual for details on how to represent directed graphs.
 
